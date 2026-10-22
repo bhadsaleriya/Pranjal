@@ -1,0 +1,183 @@
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f8fafc;
+}
+
+/* Navigation bar */
+header {
+    background-color: #111827;
+    color: white;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #60a5fa;
+    font-size: 28px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* Hero section */
+.hero {
+    min-height: 430px;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #2563eb;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #dbeafe;
+    transform: translateY(-2px);
+}
+
+/* Features section */
+.features {
+    padding: 65px 24px;
+    text-align: center;
+}
+
+.features h2,
+.about h2,
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.feature-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    padding: 30px 22px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+/* About section */
+.about {
+    padding: 60px 24px;
+    text-align: center;
+    background-color: #eaf2ff;
+}
+
+.about p {
+    max-width: 650px;
+    margin: auto;
+}
+
+/* Contact section */
+.contact {
+    padding: 60px 24px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 60px 20px;
+    }
+}
